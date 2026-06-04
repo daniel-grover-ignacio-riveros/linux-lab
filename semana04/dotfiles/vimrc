@@ -1,0 +1,53 @@
+" ~/.vimrc - Configuración de vim
+" Semana 4: Editores y Dotfiles
+
+" ---- Básico ----
+set nocompatible                " No compatible con vi antiguo
+syntax on                       " Resaltado de sintaxis
+set encoding=utf-8              " Codificación de caracteres
+
+" ---- Apariencia ----
+set number                      " Mostrar números de línea
+set cursorline                  " Resaltar la línea actual
+set showmode                    " Mostrar el modo actual en la barra
+set ruler                       " Mostrar posición del cursor
+set laststatus=2                " Barra de estado siempre visible
+
+" ---- Indentación ----
+set tabstop=4                   " Tab equivale a 4 espacios
+set shiftwidth=4                " Indentación automática: 4 espacios
+set expandtab                   " Insertar espacios en lugar de tab
+set autoindent                  " Conservar la indentación de la línea anterior
+set smartindent                 " Indentación inteligente para código
+
+" ---- Búsqueda ----
+set incsearch                   " Buscar mientras se escribe
+set hlsearch                    " Resaltar resultados de búsqueda
+set ignorecase                  " Búsqueda insensible a mayúsculas/minúsculas
+set smartcase                   " ...excepto si hay mayúsculas en el patrón
+
+" ---- Comportamiento ----
+set backspace=indent,eol,start  " Backspace funciona en todo
+set wrap                        " Envolver líneas largas
+set linebreak                   " Cortar en palabras, no en caracteres
+set scrolloff=5                 " Mantener 5 líneas de contexto al hacer scroll
+set wildmenu                    " Autocompletado mejorado de comandos
+
+" ---- Archivos ----
+set nobackup                    " No crear archivos .bak
+set noswapfile                  " No crear archivos .swp
+
+" ---- Mapeos personalizados ----
+" jj en modo Insert equivale a Esc
+inoremap jj <Esc>
+
+" Guardar con Ctrl+S (requiere: stty -ixon en .bashrc)
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>a
+
+" Limpiar el resaltado de búsqueda con Esc en modo Normal
+nnoremap <Esc> :nohlsearch<CR>
+
+" Mover líneas completas con Alt+j y Alt+k
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
