@@ -52,6 +52,17 @@ seccion_memoria() {
     echo ""
 }
 
+# === Sección 4: Disco ===
+seccion_disco() {
+    echo "[ USO DE DISCO ]"
+    echo "$SEPARADOR_SEC"
+    printf "  %-20s %6s %6s %6s %5s\n" \
+        "Partición" "Total" "Usado" "Libre" "Uso%"
+    echo "  $(printf '%.0s-' {1..48})"
+    df -h | grep -v "^tmpfs\|^udev\|^Filesystem" | \
+        awk '{printf "  %-20s %6s %6s %6s %5s\n", $6, $2, $3, $4, $5}'
+    echo ""
+}
 # === Función de uso ===
 uso() {
     echo "Uso: $0 [opcion]"
@@ -100,7 +111,9 @@ case "$MODO" in
         seccion_general
         seccion_cpu
         seccion_memoria
+        seccion_disco
         ;;
     cpu)  seccion_cpu      ;;
     mem)  seccion_memoria  ;;
+    disk) seccion_disco    ;;
 esac
