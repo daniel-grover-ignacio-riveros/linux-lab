@@ -3,6 +3,9 @@
 ## Descripción
 `monitor-procesos.sh` — Herramienta CLI para inspeccionar procesos del sistema, detectar anomalías y generar reportes con timestamp.
 
+## Historial de desarrollo
+Los commits originales de desarrollo de esta semana están disponibles en la rama [`rama-semana09`](https://github.com/daniel-grover-ignacio-riveros/linux-lab/tree/rama-semana09).
+
 ## Uso
 ./monitor-procesos.sh [opciones] [proceso1 proceso2 ...]
 
