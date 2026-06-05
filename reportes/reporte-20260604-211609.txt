@@ -1,0 +1,25 @@
+========================================
+REPORTE DE PROCESOS - 2026-06-04 21:16:09
+Sistema: otracompu  |  Usuario: vboxuser
+========================================
+
+--- Top 5 procesos por CPU ---
+  vboxuser  PID:1668    CPU:  2.2%  MEM: 11.6%  /usr/bin/gnome-shell
+  root      PID:28235   CPU:  0.6%  MEM:  0.0%  [kworker/u2:1-events_power_efficient]
+  root      PID:520     CPU:  0.5%  MEM:  0.7%  /usr/lib/snapd/snapd
+  root      PID:27960   CPU:  0.5%  MEM:  0.0%  [kworker/u2:2-events_unbound]
+  root      PID:27600   CPU:  0.4%  MEM:  0.0%  [kworker/u2:3-events_unbound]
+
+--- Top 5 procesos por MEM ---
+  vboxuser  PID:1668    CPU:  2.2%  MEM: 11.6%  /usr/bin/gnome-shell
+  vboxuser  PID:2138    CPU:  0.0%  MEM:  4.4%  /usr/bin/VBoxClient
+  vboxuser  PID:2042    CPU:  0.0%  MEM:  1.5%  /usr/libexec/gsd-xsettings
+  vboxuser  PID:1950    CPU:  0.0%  MEM:  1.1%  /usr/libexec/evolution-data-server/evolution-alarm-notify
+  vboxuser  PID:2014    CPU:  0.0%  MEM:  1.1%  /usr/bin/Xwayland
+
+--- Procesos zombie ---
+  Ninguno detectado
+
+--- Verificando procesos vigilados ---
+[0;32m[2026-06-04 21:16:09] [OK] Proceso 'bash' activo (PID: 27779)[0m
+[0;33m[2026-06-04 21:16:09] [WARNING] Proceso 'sshd' no encontrado[0m
